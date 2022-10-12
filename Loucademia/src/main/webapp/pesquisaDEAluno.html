@@ -1,0 +1,130 @@
+<!-- Cabeçalho Inicio -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="ISO-8859-1">
+<title>Loucademia</title>
+<link rel="stylesheet" type="text/css" href="css/Loucademia_Estilo.css">
+
+</head>
+<body>
+	<header>
+		<img src="images/Loucademia.JPG">
+		<nav>
+		<div>
+		    <a href="novoAluno.html">Novo Aluno</a><br>
+		    <a href="pesquisaDEAluno.html">Pesquisa de aluno</a><br>
+		    <a href="controleDeAdessso.html">Controle de acesso</a><br>
+		    <a href="relatorioDeEnetradaSaida.html">Relatórios de Entrada Saídas</a><br>
+		    <a href="relatorioDeSituacoes.html">Relatórios de Situações</a><br>
+		</div>
+		
+		</nav>
+
+	</header>
+<!-- Cabeçalho Fim  -->
+
+<h1>Pesquisa de aluno</h1>
+
+	<div id="infoMessage">(eventual mensagem de sistema confirmando
+		sucesso ou erro)
+		</div>
+		<br>
+		<form action="">
+		<fieldset>
+		<legend>Parametros da pesquisa</legend>
+		
+		<label for="id">ID</label><br>
+		<input type="text" name="id" id="id"><br>
+		
+		<label for="nome">Nome</label><br>
+		<input type="text" name="nome" id="nome"><br>
+		
+		<label for="rg">RG</label><br>
+		<input type="text" name="rg" id="rg"><br>
+		
+		<label for="telfoneDDD">Telefone</label><br>
+		<input type="tel" name="telefoneDDD" id="telefoneFixoDDD">
+		<input type="tel" name="telefoneNumero" id="telefoneFixoNumero">
+		
+		
+		
+		</fieldset>
+		<br>
+		
+		<input type="submit" value="Pesquisar">
+		
+		
+		</form>
+        
+         <table>
+         <tr>
+         <th>ID</th>
+         <th>Nome</th>
+         <th>E-mail</th>
+         <th>Situação</th>
+         <th>Acões</th>
+         <th></th>
+         
+         </tr>
+         
+         <tr>
+         <td>1</td>
+         <td>Adriano</td>
+         <td>111.111.111.</td>
+         <td>adriano.analista@gmail.com</td>
+         <td>Ativo</td>
+         <td>
+          <input type="button" value="Editar">
+          <input type="button" value="Enviar">
+         </td>
+         </tr>
+          <tr>
+         <td>2</td>
+         <td>Carlos</td>
+         <td>222.222.222</td>
+         <td>carlos@gmail.com</td>
+         <td>Inativo</td>
+         <td>
+          <input type="button" value="Editar">
+          <input type="button" value="Enviar">
+         </td>
+         </tr>
+          <tr>
+         <td>3</td>
+         <td>Marcos</td>
+         <td>333.333.333</td>
+         <td>marcos@gmail.com</td>
+         <td>Com pendencia</td>
+         <td>
+          <input type="button" value="Editar">
+          <input type="button" value="Enviar">
+         </td>
+         </tr>
+          <tr>
+         <td>4</td>
+         <td>Antonio</td>
+         <td>444.444.444</td>
+         <td>antonio@gmail.com</td>
+         <td>Ativo</td>
+         <td>
+          <input type="button" value="Editar">
+          <input type="button" value="Enviar">
+         </td>
+         </tr>
+         
+         </table>
+
+
+
+
+<!-- Rodape - Inicio -->
+
+
+<!-- Rodape - Fim -->
+
+</body>
+
+
+</html>
