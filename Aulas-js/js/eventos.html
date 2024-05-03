@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+     <h1>Eventos JavaScript</h1>
+
+     <button onclick="eventoClick()">Evento Clique</button><br>
+     <button ondblclick="eventoDblClick()">Duplo Clique</button>
+
+     <div id="teste" onmouseover="viraVermelho()" style="margin:auto auto;width:  80%; height: 200px; background: blue;"></div><br>
+
+     <div id="teste" onmouseout="viraAzul()" style="margin:auto auto;width:  80%; height: 200px; background: blue;"></div><br>
+
+     <div id="teste" onmousemove="adicionaTexto()" margin:auto auto;width:  80%; height: 200px; background: blue;"></div><br>
+
+     <input onfocus="alert('Campo Focado')" id="campoTexo" style="padding: 80px; font-size:40px;" type="text" placeholder="Digite alguma coisa">
+
+    <script src="eventos.js"></script>
+</body>
+</html>
