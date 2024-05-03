@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3</title>
+    <style>
+        input{
+            height: 30px;
+            width: 400px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+     <input id="usuario_nome" placeholder="Qual seu nome"><br>
+     <input id="endereco_cep" placeholder="Qual seu CEP"><br>
+     <input id="endereco_rua" placeholder="Qual sua rua"><br>
+     <input id="endereco_bairro" placeholder="Qual seu Bairro"><br>
+     <input id="endereco_cidade" placeholder="Qual sua cidade"><br>
+     <input id="endereco_estado" placeholder="Qual seu estado"><br>
+
+     <input type="file" onchange="showfile(this)">
+     <button onclick="salvar()">Salvar</button>
+
+     <script>
+            function showfile(input){
+                var file = input.file[0];
+
+                var fr = new FileReader();
+                fr.onload = function(dadosArquivos){
+                    var dados = JSON.parse(dadosArquivos.target.result);
+                    document.getElementById("usuario_nome").valeu = dados.nome;
+                    document.getElementById("endereco_cep").valeu = dados.cep;
+                    document.getElementById("endereco_rua").valeu = dados.rua;
+                    document.getElementById("endereco_bairro").valeu = dados.bairro;
+                    document.getElementById("endereco_cidade").valeu = dados.cidade;
+                    document.getElementById("endereco_estado").valeu = dados.estado;
+                }
+                fr.readAsText(file);
+            }
+            function salvar(){
+                var templink = document.createElement("a");
+                var dadosSalvar = {
+                    "nome":document.getElementById("usuario_nome").valeu,
+                    "cep": document.getElementById("endereco_cep").valeu, 
+                    "rua": document.getElementById("endereco_rua").valeu,
+                    "bairro":document.getElementById("endereco_bairro").valeu, 
+                    "cidade":document.getElementById("endereco_cidade").valeu, 
+                    "estado":document.getElementById("endereco_estado").valeu 
+                }
+                let meuArquivo = new Blob([JSON.stringify(dadosSalvar)],{type:"text/plain"});
+                templink.setAttribute("href",URL.createObjectURL(meuArquivo));
+                templink.setAttribute("download","dados.json");
+                templink.click();
+            }
+     </script>
+    
+</body>
+</html>

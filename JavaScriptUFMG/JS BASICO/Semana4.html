@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana4</title>
+</head>
+<body>
+    <h1>Funções</h1>
+    <script>
+        function buscarCep(){
+            var cep = prompt("Qual CEP deseja buscar");
+            var url = "https://brasilapi.com.br/api/cep/v2/" + cep;
+            fetch(url)
+            .then(function(resposta){
+                resposta.json().then(function(dados){
+                    console.log(dados);
+                    alert("sua cidade é " + dados.city + " no bairro " + dados.neighborhood + " na rua " + dados.street)
+            })
+            })
+            .catch(function(erro){
+                console.log("Ocorreu um erro ao buscar os dados", erro);
+
+            })
+        }
+
+        buscarCep();
+    </script>
+</body>
+</html>
